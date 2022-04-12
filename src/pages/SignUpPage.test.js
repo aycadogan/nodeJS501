@@ -126,11 +126,7 @@ describe("Interactions", () => {
                 return res(ctx.status(400))
             })
         )
-
-        // const container = init()
-        // const removeButton = container.querySelector('.delete')
-        // userEvent.click(removeButton)
-
+        
         init()
 
         const closeButton = await waitFor(() => screen.findByRole('alertdialog'))

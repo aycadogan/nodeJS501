@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import {
   Block,
   Box,
@@ -29,7 +28,6 @@ const SignUpPage = () => {
   const submit = () => {
     const body = { username, email, password };
     setIsLoading(true);
-    //   axios.post("http://localhost:8000/api/user/signup", body)
     fetch("http://localhost:8000/api/user/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

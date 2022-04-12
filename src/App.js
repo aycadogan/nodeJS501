@@ -1,13 +1,19 @@
+import "bulma/css/bulma.min.css"
+import { Container, Columns} from 'react-bulma-components'
 
 import SignUpPage from './pages/SignUpPage'
-import TestPage from './pages/TestPage'
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <>
-    <TestPage />
-    <SignUpPage />
-    </>
+    <Container breakpoint={"fluid"}>
+      {window.location.pathname === "/" && <HomePage />}
+      {window.location.pathname === "/signup" && (
+        <Columns.Column>
+          <SignUpPage />
+        </Columns.Column>
+      )}
+    </Container>
   );
 }
 
